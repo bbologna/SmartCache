@@ -1,5 +1,0 @@
-c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache.Tests\bin\Debug\SmartCache.Tests.dll
-c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache.Tests\bin\Debug\SmartCache.Tests.pdb
-c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache.Tests\obj\Debug\SmartCache.Tests.csprojResolveAssemblyReference.cache
-c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache.Tests\obj\Debug\SmartCache.Tests.dll
-c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache.Tests\obj\Debug\SmartCache.Tests.pdb

@@ -1,7 +1,0 @@
-c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache.Utilities\bin\Debug\SmartCache.Utilities.dll.config
-c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache.Utilities\bin\Debug\SmartCache.Utilities.dll
-c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache.Utilities\bin\Debug\SmartCache.Utilities.pdb
-c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache.Utilities\bin\Debug\ObjectCacheExtension.dll
-c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache.Utilities\obj\Debug\SmartCache.Utilities.csprojResolveAssemblyReference.cache
-c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache.Utilities\obj\Debug\SmartCache.Utilities.dll
-c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache.Utilities\obj\Debug\SmartCache.Utilities.pdb
