@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartCache.Tests
+namespace SmartCache.Tests.Fakes
 {
-    public class BasicTest
+    public class Item
     {
+        public int Id { get; set; }
     }
 }

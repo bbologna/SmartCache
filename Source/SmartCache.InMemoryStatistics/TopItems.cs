@@ -2,44 +2,35 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Timers;
+
 
 namespace SmartCache.InMemoryStatistics
 {
     public class TopItems<T>
     {
         private LockList<T> hits;
-        private Timer timer;
         private ReportsSummary<T> summary;
-        private int milisecondsInterval;
         private int lockListMaxSize;
         private Func<T, T, bool> equalsFunction;
+        private IEnlapsedEvent enlapsedEvent;
 
 
-        public TopItems(int milisecondsInterval, int lockListMaxSize, int maxReports, int maxSummarySize)
-            : this(milisecondsInterval, lockListMaxSize, maxReports, maxSummarySize, (T x, T y) => { return x.Equals(y); })
+        public TopItems(IEnlapsedEvent enlapsed, int lockListMaxSize, int maxReports, int maxSummarySize)
+            : this(lockListMaxSize, maxReports, maxSummarySize, (T x, T y) => { return x.Equals(y); })
         {
+            this.enlapsedEvent = enlapsed;
+            this.enlapsedEvent.SetEnlapsedEvent(Reset);
         }
 
-        public TopItems(int milisecondsInterval, int lockListMaxSize, int maxReports, int maxSummarySize, Func<T, T, bool> equalsFunction)
+        public TopItems(int lockListMaxSize, int maxReports, int maxSummarySize, Func<T, T, bool> equalsFunction)
         {
-            this.milisecondsInterval = milisecondsInterval;
             this.lockListMaxSize = lockListMaxSize;
             summary = new ReportsSummary<T>(maxReports, maxSummarySize, equalsFunction);
             hits = new LockList<T>();
             this.equalsFunction = equalsFunction;
-            CreateTimer();
         }
 
-        private void CreateTimer()
-        {
-            timer = new Timer(milisecondsInterval);
-            timer.AutoReset = true;
-            timer.Elapsed += new ElapsedEventHandler(Reset);
-            timer.Enabled = true;
-        }
-
-        private void Reset(object obj, ElapsedEventArgs args)
+        private void Reset()
         {
             //Get copy of items
             var copyList = hits.Clone();
