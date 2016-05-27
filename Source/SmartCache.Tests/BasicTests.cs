@@ -9,7 +9,7 @@ using SmartCache.Tests.Fakes;
 namespace SmartCache.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class BasicTests
     {
         private ICacheConfig config;
         private IEnlapsedEvent enlapsedEvent;
