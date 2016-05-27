@@ -56,9 +56,10 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Fakes\ItemsLogic.cs" />
+    <Compile Include="Fakes\ManualEnlapsedFire.cs" />
     <Compile Include="Fakes\QueryCriteria.cs" />
     <Compile Include="Fakes\Item.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="BasicTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

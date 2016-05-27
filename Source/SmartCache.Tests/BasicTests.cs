@@ -23,7 +23,7 @@ namespace SmartCache.Tests
             config.MaxSummarySize.Returns(5);
             config.SlidingExpiration.Returns(50);
             config.AbsoluteExpiration.Returns(100);
-            enlapsedEvent = Substitute.For<IEnlapsedEvent>();
+            enlapsedEvent = new ManualEnlapsedFire();
         }
 
         /// <summary>
@@ -63,6 +63,31 @@ namespace SmartCache.Tests
 
             // Assert
             Assert.AreEqual(3, itemsLogic.TimesCalled);
+            Assert.IsNotNull(result1);
+            Assert.IsNotNull(result2);
+            Assert.IsNotNull(result3);
+        }
+
+        [TestMethod]
+        public void AfterEnlapsedEvenetFiredProxiesFunction()
+        {
+            // Arrange
+            var itemsLogic = new Items();
+            var cacheUnderTest = new SmartCache<QueryCriteria, Item>(enlapsedEvent, MemoryCache.Default, "Item", itemsLogic.GetItem, config);
+            var queryCriteria = new QueryCriteria("1", true);
+
+            // Act
+            var result1 = cacheUnderTest.Invoke(queryCriteria);
+            var result2 = cacheUnderTest.Invoke(queryCriteria);
+            var result3 = cacheUnderTest.Invoke(queryCriteria);
+            enlapsedEvent.Fire();
+            cacheUnderTest.Invoke(queryCriteria); // <== Last Invoke
+            cacheUnderTest.Invoke(queryCriteria);
+            cacheUnderTest.Invoke(queryCriteria);
+            cacheUnderTest.Invoke(queryCriteria);
+
+            // Assert
+            Assert.AreEqual(4, itemsLogic.TimesCalled);
             Assert.IsNotNull(result1);
             Assert.IsNotNull(result2);
             Assert.IsNotNull(result3);
