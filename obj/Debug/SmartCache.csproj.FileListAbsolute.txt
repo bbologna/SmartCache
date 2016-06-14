@@ -9,3 +9,13 @@ c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache\bin
 c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache\bin\Debug\SmartCache.Utilities.pdb
 c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache\obj\Debug\SmartCache.dll
 c:\users\bologna\documents\visual studio 2015\Projects\SmartCache\SmartCache\obj\Debug\SmartCache.pdb
+D:\Bruno\Projects\SmartCache\Source\SmartCache\bin\Debug\SmartCache.dll.config
+D:\Bruno\Projects\SmartCache\Source\SmartCache\bin\Debug\SmartCache.dll
+D:\Bruno\Projects\SmartCache\Source\SmartCache\bin\Debug\SmartCache.pdb
+D:\Bruno\Projects\SmartCache\Source\SmartCache\bin\Debug\SmartCache.InMemoryStatistics.dll
+D:\Bruno\Projects\SmartCache\Source\SmartCache\bin\Debug\SmartCache.Utilities.dll
+D:\Bruno\Projects\SmartCache\Source\SmartCache\bin\Debug\SmartCache.InMemoryStatistics.pdb
+D:\Bruno\Projects\SmartCache\Source\SmartCache\bin\Debug\SmartCache.Utilities.pdb
+D:\Bruno\Projects\SmartCache\Source\SmartCache\obj\Debug\SmartCache.csprojResolveAssemblyReference.cache
+D:\Bruno\Projects\SmartCache\Source\SmartCache\obj\Debug\SmartCache.dll
+D:\Bruno\Projects\SmartCache\Source\SmartCache\obj\Debug\SmartCache.pdb

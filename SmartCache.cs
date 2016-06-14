@@ -18,14 +18,14 @@ namespace SmartCache
         private Func<T, R> function;
         private ObjectCache cache;
         private TopItems<ICacheItem> topItems;
-
-        public SmartCache(ObjectCache cache, string key, Func<T, R> function, ICacheConfig config)
+         
+        public SmartCache(IEnlapsedEvent enlapsedEvent, ObjectCache cache, string key, Func<T, R> function, ICacheConfig config)
         {
             this.config = config;
             this.cache = cache;
             this.key = key;
             this.function = function;
-            this.topItems = new TopItems<ICacheItem>(config.MilisecondsInterval, config.LockListMaxSize, config.MaxReports, config.MaxSummarySize);
+            this.topItems = new TopItems<ICacheItem>(enlapsedEvent, config.LockListMaxSize, config.MaxReports, config.MaxSummarySize);
         }
 
         public R Invoke(T argument)

@@ -12,7 +12,6 @@ namespace SmartCache
         int LockListMaxSize { get; set; }
         int MaxReports { get; set; }
         int MaxSummarySize { get; set; }
-        int MilisecondsInterval { get; set; }
         int SlidingExpiration { get; set; }
     }
 }
